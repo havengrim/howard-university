@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
-import { images } from "../assets/images"; // Ensure the path is correct
+import { images } from "../assets/images.ts"; // Ensure the path is correct
 
 const Hero = () => {
   useEffect(() => {

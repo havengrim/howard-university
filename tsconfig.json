@@ -5,6 +5,7 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "allowImportingTsExtensions": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -12,7 +13,7 @@
     // "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": false, // Allow emitting JavaScript
+    "noEmit": true, // Allow emitting JavaScript
     "jsx": "react-jsx",
 
     /* Linting */
@@ -21,5 +22,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "include": [
+   "src/**/*" 
+  ]
 }

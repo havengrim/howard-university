@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { images } from '../assets/images';
+import { images } from '../assets/images.ts';
 import { GoSun } from 'react-icons/go';
 import { HiMenu, HiX } from 'react-icons/hi';
 import { gsap } from 'gsap';
