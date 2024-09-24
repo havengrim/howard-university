@@ -13,11 +13,19 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Set body styles when loading starts
+    document.body.style.overflow = 'hidden';
     const timer = setTimeout(() => {
       setLoading(false);
+      document.body.style.overflow = '';
+      document.body.style.position = ''; // Reset overflow when loading is complete
     }, 2000);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      document.body.style.overflow = ''; 
+      document.body.style.position = '';// Clean up on unmount
+    };
   }, []);
 
   return (
@@ -27,7 +35,7 @@ const Home = () => {
       ) : (
         <>
           <Navbar />
-          <section className="bg-background h-full">
+          <section className="bg-background h-full overflow-y-auto">
             <Hero />
             <AboutUs />
             <LatestNews />
