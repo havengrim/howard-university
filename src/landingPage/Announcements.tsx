@@ -5,78 +5,75 @@ import { Card, CardHeader, CardTitle, CardDescription } from "../components/ui/c
 import { GoCalendar } from "react-icons/go";
 import { images } from "../assets/images.ts";
 
-const Announcements = () => {
+const AvailablePrograms = () => {
   useEffect(() => {
-    AOS.init({ duration: 500 });
+    AOS.init({ duration: 1000 });
   }, []);
 
-  // Sample data for the announcements with icons
-  const announcements = [
+  // Sample data for the available programs with icons
+  const programs = [
     {
-      title: "University Orientation 2024",
-      description: "Join us for the annual orientation program. This is a great opportunity to learn about campus life, academic resources, and meet fellow students. ",
-      image: images.announcement1,
-      date: "August 1, 2024",
+      title: "Bachelor of Science in Computer Science",
+      description: "Gain in-depth knowledge and skills in computer science, software development, and data analysis.",
+      image: images.announcement1, // Ensure you have this image in your assets
+      date: "Available from September 2024",
       icon: <GoCalendar />,
     },
     {
-      title: "Exam Schedule Released",
-      description: "View the exam schedule for this semester. Be sure to check the dates and prepare accordingly to avoid any last-minute surprises. ",
-      image: images.announcement2,
-      date: "August 10, 2024",
+      title: "Bachelor of Arts in Business Administration",
+      description: "Learn the fundamentals of business management, marketing, and finance to prepare for a successful career.",
+      image: images.announcement2, // Ensure you have this image in your assets
+      date: "Available from September 2024",
       icon: <GoCalendar />,
     },
     {
-      title: "New Course Launch: AI Fundamentals",
-      description: "Explore the basics of AI and machine learning in our new course launch. This course is designed to give you a solid foundation and understanding of key concepts in AI field. ",
-      image: images.announcement3,
-      date: "August 15, 2024",
+      title: "Master of Science in Data Science",
+      description: "Delve into advanced data analytics, machine learning, and big data technologies in our master's program.",
+      image: images.announcement3, // Ensure you have this image in your assets
+      date: "Available from September 2024",
       icon: <GoCalendar />,
     },
   ];
 
   return (
-    <section className="sm:py-10 p-0 bg-gray-50 relative">
+    <section className="sm:py-10 p-0 bg-primary-foreground relative">
       <div className="container-padding text-center">
         <div data-aos="fade-up">
-            <h2 className="text-4xl md:text-6xl font-medium mb-2">Announcements</h2>
-            <p className="text-gray-600 mb-12">Stay informed with the latest announcements</p>
+          <h2 className="text-4xl md:text-6xl font-medium mb-2">Available Programs</h2>
+          <p className="text-gray-600 mb-12">Explore our programs and find the right fit for you.</p>
         </div>
 
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" data-aos="fade-up">
-        {announcements.map((announcement, index) => (
-             <Card key={index} className="!p-4 bg-white shadow-sm transition-transform transform hover:scale-105 rounded-xl relative" >
-             <div className="relative">
-               <img
-                 src={announcement.image}
-                 alt={announcement.title}
-                 className="w-full h-40 object-cover  bg-cover rounded-xl transition-opacity duration-300"
-               />
-               {/* Gradient Overlay */}
-               <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-40 rounded-xl"></div>
-             </div>
-             
-             <CardHeader className="p-4 text-start relative z-10">
-               <CardTitle className="text-lg font-semibold mb-1 hover:text-blue-600 transition-colors duration-200">
-                 {announcement.title}
-               </CardTitle>
-               <CardDescription className="text-sm text-gray-600">
-                 {announcement.description}
-               </CardDescription>
-               <p className="text-sm text-gray-500 mt-4 flex gap-2 items-center">
-                 {announcement.icon}
-                 {announcement.date}
-               </p>
-             </CardHeader>
-           </Card>
-           
-             
-                ))}
+          {programs.map((program, index) => (
+            <Card key={index} className="!p-4 bg-white shadow-sm transition-transform transform hover:scale-105 rounded-xl relative cursor-pointer">
+              <div className="relative">
+                <img
+                  src={program.image}
+                  alt={program.title}
+                  className="w-full h-40 object-cover bg-cover rounded-xl transition-opacity duration-300"
+                />
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-40 rounded-xl"></div>
+              </div>
+
+              <CardHeader className="p-4 text-start relative z-10">
+                <CardTitle className="text-lg font-semibold mb-1 hover:text-blue-600 transition-colors duration-200">
+                  {program.title}
+                </CardTitle>
+                <CardDescription className="text-sm text-gray-600">
+                  {program.description}
+                </CardDescription>
+                <p className="text-sm text-gray-500 mt-6 flex gap-2 items-center pt-2">
+                  {program.icon}
+                  {program.date}
+                </p>
+              </CardHeader>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
   );
 };
 
-export default Announcements;
+export default AvailablePrograms;

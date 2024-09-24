@@ -10,6 +10,9 @@ import orient from './orient-1.jpg'
 import announcement1 from './announcement-1.jpg'
 import announcement2 from './announcement-2.jpg'
 import announcement3 from './announcement-3.jpg'
+import cheerful from './cheerful.jpg'
+import testimonial from './testimonial.jpg'
+import logoWhite from './logo-light.png'
 
 export const images = {
     logo,
@@ -23,5 +26,8 @@ export const images = {
     orient,
     announcement1,
     announcement2,
-    announcement3
+    announcement3,
+    cheerful,
+    testimonial,
+    logoWhite
 };

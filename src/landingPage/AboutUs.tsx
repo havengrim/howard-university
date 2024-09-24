@@ -15,7 +15,7 @@ const AboutUs = () => {
 
   return (
     <div className="container-padding">
-      <div className="py-14">
+      <div className="py-28">
         <div className="grid grid-cols-1 md:grid-cols-2 sm:gap-20 gap-5 w-full">
           <div data-aos="fade-right">
             <span className="text-4xl md:text-6xl font-regular">Academic Excellence</span>

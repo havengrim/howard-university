@@ -19,7 +19,7 @@ const Navbar = () => {
     }, [isOpen]);
 
     return (
-        <div className='sticky top-0 w-full bg-white shadow-md z-50'>
+        <div className='fixed top-0 w-full bg-white shadow-md z-50'>
             <div className="container-padding">
                 <nav className="flex justify-between items-center">
                     <div className='flex gap-2 items-center'>
