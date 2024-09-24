@@ -5,6 +5,9 @@ import Hero from './Hero';
 import AboutUs from './AboutUs';
 import LatestNews from './LatestNews';
 import Announcements from './Announcements';
+import SuccessStories from './SuccessStories';
+import StudentRegistration from './StudentRegistration';
+import Footer from './Footer';
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -29,6 +32,9 @@ const Home = () => {
             <AboutUs />
             <LatestNews />
             <Announcements/>
+            <SuccessStories />
+            <StudentRegistration />
+            <Footer />
           </section>
         </>
       )}
