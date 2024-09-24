@@ -21,7 +21,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className='overflow-hidden'>
+    <div className=''>
       {loading ? (
         <Sugar /> // Display the preloader while loading
       ) : (
