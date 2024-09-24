@@ -60,7 +60,9 @@
 }
 
 body {
-  @apply font-sans; /* Applies the Open Sans font globally */
+  @apply font-sans;
+  overflow: auto; /* Ensure the body is scrollable */
+  height: auto; /* Applies the Open Sans font globally */
 }
 
 .container-padding{
